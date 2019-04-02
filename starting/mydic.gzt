@@ -1,0 +1,52 @@
+encoding "utf8";
+
+import "base.proto";
+import "articles_base.proto";
+
+import "facttypes.proto";
+
+TAuxDicArticle "имя"
+{
+    key = { "alg:fio" type=CUSTOM }
+}
+
+TAuxDicArticle "гео"
+{
+    key = { "alg:geo" type=CUSTOM }
+}
+
+TAuxDicArticle "People"
+{
+    key = { "tomita:people.cxx" type=CUSTOM }
+}
+
+TAuxDicArticle "должность"
+{
+    key = { "positions.txt" type=FILE }
+}
+
+TAuxDicArticle "страны"
+{
+    key = { "country.txt" type=FILE }
+}
+
+TAuxDicArticle "префиксы"
+{
+    key = { "город" | "деревня" | "посёлок" | "село" | "пгт." | "г." | "с." | "п." | "ЗАТО" | "город-герой" | "город-курорт" | "поселок городского типа" | "поселка городского типа" | "поселку городского типа"| "поселком городского типа" | "поселке городского типа" | "поселки городского типа" | "поселков городского типа" | "поселкам городского типа" | "поселками городского типа" | "поселках городского типа"}
+}
+
+TAuxDicArticle "города"
+{
+    key = {"cities1.txt" type=FILE}
+}
+
+TAuxDicArticle "Санкт_Петербург"
+{
+    key = "Санкт-Петербург" | "Питер" | "Петербург";
+    lemma = "Санкт-Петербург";
+} 
+
+TAuxDicArticle "предикаты"
+{
+    key = {"являться" | "занимающий пост" | "занимать" | "переходить" | "достигатЬ" | "принимать" | "быть" } 
+}
