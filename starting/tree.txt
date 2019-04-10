@@ -8,18 +8,6 @@
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -32,24 +20,6 @@
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -62,14 +32,6 @@
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -82,24 +44,6 @@
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
-
-
-==================== multiwords ====================
-
-
-
-==================== multiwords ====================
-
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -112,14 +56,46 @@
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
+
+
+==================== multiwords ====================
+
 
 
 ==================== multiwords ====================
@@ -134,16 +110,69 @@ All  ->  Countries[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
             Noun  ->  России :: 1
 
+coverage: 1, weight: 0.33385964
+All  ->  PositionInterp[*директоров] :: 0.66666666
+    PositionInterp  ->  Position[*директоров] :: 0.66666666
+        Position  ->  Word[*директоров]<kwt=должность> :: 0.66666666
+            Word  ->  директоров :: 1
+
 
 
 ==================== multiwords ====================
 
 России: TAuxDicArticle, 
 	People, страны, 
+директоров: TAuxDicArticle, 
+	должность, 
+
+
+===================== people.cxx =====================
+
+coverage: 4, weight: 0.33690476
+All  ->  PositionInterp[*директоров 23 марта регулятор] :: 0.35
+    PositionInterp  ->  Position[*директоров 23 марта регулятор] :: 0.35
+        Position  ->  Word[*директоров]<kwt=должность>  AnyWord[23]  Noun[марта]  Word[регулятор]<kwt=~имя> :: 0.35
+        |   
+        |__ Word  ->  директоров :: 1
+        |   
+        |__ AnyWord  ->  23 :: 1
+        |   
+        |__ Noun  ->  марта :: 1
+        |   
+        |__ Word  ->  регулятор :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.34333333
+All  ->  PositionInterp[*директоров] :: 0.66666666
+    PositionInterp  ->  Position[*директоров] :: 0.66666666
+        Position  ->  Word[*директоров]<kwt=должность> :: 0.66666666
+            Word  ->  директоров :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.34
+All  ->  PositionInterp[*директоров 23] :: 0.43333333
+    PositionInterp  ->  Position[*директоров 23] :: 0.43333333
+        Position  ->  Word[*директоров]<kwt=должность>  Word[23]<kwt=~имя> :: 0.43333333
+        |   
+        |__ Word  ->  директоров :: 1
+        |   
+        |__ Word  ->  23 :: 1
+
+DROPPED OCCURRENCE, coverage: 3, weight: 0.33809523
+All  ->  PositionInterp[*директоров 23 марта] :: 0.36666666
+    PositionInterp  ->  Position[*директоров 23 марта] :: 0.36666666
+        Position  ->  Word[*директоров]<kwt=должность>  AnyWord[23]  Noun[марта] :: 0.36666666
+        |   
+        |__ Word  ->  директоров :: 1
+        |   
+        |__ AnyWord  ->  23 :: 1
+        |   
+        |__ Noun  ->  марта :: 1
+
 
 
 ==================== multiwords ====================
 
+директоров: TAuxDicArticle, 
+	должность, 
 
 
 ==================== multiwords ====================
@@ -594,37 +623,12 @@ All  ->  Countries[*России] :: 0.66666666
 	People, страны, 
 
 
-===================== people.cxx =====================
-
-coverage: 2, weight: 0.33443223
-All  ->  PositionInterp[*президента]  PersonName[Дональда_Трампа] :: 0.43333333
-|   
-|__ PositionInterp  ->  Position[*президента] :: 0.66666666
-|       Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-|           Word  ->  президента :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Дональда_Трампа] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Дональда_Трампа]<kwt=имя> :: 0.66666666
-            Word  ->  Дональда_Трампа :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33461538
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
 
 Дональда_Трампа: TAuxDicArticle, 
 	имя, 
 Хантсман: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
-президента_Дональда_Трампа: TAuxDicArticle, 
-	People, 
 является: TAuxDicArticle, 
 	предикаты, 
 
@@ -691,12 +695,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.34333333
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
 coverage: 1, weight: 0.34
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -715,14 +713,10 @@ All  ->  Countries[*РФ] :: 0.66666666
 	предикаты, 
 занимавший: TAuxDicArticle, 
 	предикаты, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
 
-Чуприян: TAuxDicArticle, 
-	имя, 
 был: TAuxDicArticle, 
 	предикаты, 
 
@@ -961,58 +955,13 @@ All  ->  Countries[*России] :: 0.66666666
 	предикаты, 
 
 
-===================== people.cxx =====================
-
-coverage: 4, weight: 0.33611111
-All  ->  PositionInterp[*президента по поводу вакантной] :: 0.35
-    PositionInterp  ->  Position[*президента по поводу вакантной] :: 0.35
-        Position  ->  Word[*президента]<kwt=должность>  AnyWord[по]  Noun[поводу]  Word[вакантной]<kwt=~имя> :: 0.35
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ AnyWord  ->  по :: 1
-        |   
-        |__ Noun  ->  поводу :: 1
-        |   
-        |__ Word  ->  вакантной :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33809523
-All  ->  PositionInterp[*президента по] :: 0.43333333
-    PositionInterp  ->  Position[*президента по] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Word[по]<kwt=~имя> :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Word  ->  по :: 1
-
-DROPPED OCCURRENCE, coverage: 3, weight: 0.33690476
-All  ->  PositionInterp[*президента по поводу] :: 0.36666666
-    PositionInterp  ->  Position[*президента по поводу] :: 0.36666666
-        Position  ->  Word[*президента]<kwt=должность>  AnyWord[по]  Noun[поводу] :: 0.36666666
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ AnyWord  ->  по :: 1
-        |   
-        |__ Noun  ->  поводу :: 1
+==================== multiwords ====================
 
 
 
 ==================== multiwords ====================
 
-президента: TAuxDicArticle, 
-	должность, 
-
-
-==================== multiwords ====================
-
-Меня: TAuxDicArticle, 
+Меня_Михаила_Александровича: TAuxDicArticle, 
 	имя, 
 Рябухин: TAuxDicArticle, 
 	имя, 
@@ -1068,8 +1017,6 @@ All  ->  PositionInterp[*президента по поводу] :: 0.36666666
 	имя, 
 Бывший: TAuxDicArticle, 
 	предикаты, 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -1084,16 +1031,12 @@ All  ->  PositionInterp[*президента по поводу] :: 0.36666666
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 Надеждин: TAuxDicArticle, 
 	имя, 
 
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -1158,8 +1101,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 Белова: TAuxDicArticle, 
 	имя, 
-Чистюхин: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -1176,14 +1117,10 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -1228,12 +1165,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.33690476
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
 coverage: 1, weight: 0.33611111
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -1248,8 +1179,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 	People, страны, 
 было: TAuxDicArticle, 
 	предикаты, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -1260,8 +1189,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -1604,20 +1531,8 @@ All  ->  Countries[*Россия] :: 0.66666666
 	имя, 
 
 
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.33690476
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -1636,33 +1551,7 @@ All  ->  PositionInterp[*президента] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.33809523
-All  ->  PositionInterp[*президент России подписал] :: 0.36666666
-    PositionInterp  ->  Position[*президент России подписал] :: 0.36666666
-        Position  ->  Word[*президент]<kwt=должность>  Noun[России]  Word[подписал]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  президент :: 1
-        |   
-        |__ Noun  ->  России :: 1
-        |   
-        |__ Word  ->  подписал :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34333333
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.34
-All  ->  PositionInterp[*президент России] :: 0.43333333
-    PositionInterp  ->  Position[*президент России] :: 0.43333333
-        Position  ->  Word[*президент]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  президент :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
+coverage: 1, weight: 0.34
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -1677,9 +1566,7 @@ All  ->  Countries[*России] :: 0.66666666
 Владимира_Печеного: TAuxDicArticle, 
 	имя, 
 России: TAuxDicArticle, 
-	страны, 
-президент: TAuxDicArticle, 
-	должность, 
+	People, страны, 
 
 
 ==================== multiwords ====================
@@ -1698,7 +1585,7 @@ All  ->  Countries[*России] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.33690476
+coverage: 4, weight: 0.33690476
 All  ->  S1[*главы Нижнего_Тагила в] :: 0.36666666
     S1  ->  S[*главы Нижнего_Тагила в] :: 0.36666666
         S  ->  Word[*главы]  {Word%TERM,hreg1,kw=города}[Нижнего_Тагила]  Word[в] :: 0.36666666
@@ -2274,29 +2161,8 @@ All  ->  Countries[*Россия] :: 0.66666666
 	префиксы, 
 
 
-===================== people.cxx =====================
-
-coverage: 2, weight: 0.33809523
-All  ->  PositionInterp[*президента с] :: 0.43333333
-    PositionInterp  ->  Position[*президента с] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Word[с]<kwt=~имя> :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Word  ->  с :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ===================== people.cxx =====================
@@ -2335,43 +2201,17 @@ All  ->  Countries[*России] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президенты России] :: 0.43333333
-    PositionInterp  ->  Position[*Президенты России] :: 0.43333333
-        Position  ->  Word[*Президенты]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  Президенты :: 1
-        |   
-        |__ Noun  ->  России :: 1
+coverage: 1, weight: 0.36666666
+All  ->  Countries[*России] :: 0.66666666
+    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
+        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
+            Noun  ->  России :: 1
 
 coverage: 1, weight: 0.34333333
 All  ->  Countries[*Белоруссии] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
             Noun  ->  Белоруссии :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президенты] :: 0.66666666
-    PositionInterp  ->  Position[*Президенты] :: 0.66666666
-        Position  ->  Word[*Президенты]<kwt=должность> :: 0.66666666
-            Word  ->  Президенты :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
-All  ->  Countries[*России] :: 0.66666666
-    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
-        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
-            Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.35
-All  ->  PositionInterp[*Президенты России и] :: 0.36666666
-    PositionInterp  ->  Position[*Президенты России и] :: 0.36666666
-        Position  ->  Word[*Президенты]<kwt=должность>  Noun[России]  Word[и]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  Президенты :: 1
-        |   
-        |__ Noun  ->  России :: 1
-        |   
-        |__ Word  ->  и :: 1
 
 
 
@@ -2385,10 +2225,8 @@ All  ->  PositionInterp[*Президенты России и] :: 0.36666666
 	города, 
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
-Президенты: TAuxDicArticle, 
-	должность, 
 России: TAuxDicArticle, 
-	страны, 
+	People, страны, 
 
 
 ===================== people.cxx =====================
@@ -2433,14 +2271,11 @@ All  ->  Countries[*Белоруссией] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 2, weight: 0.33809523
-All  ->  PositionInterp[*президент Белоруссии] :: 0.43333333
-    PositionInterp  ->  Position[*президент Белоруссии] :: 0.43333333
-        Position  ->  Word[*президент]<kwt=должность>  Noun[Белоруссии] :: 0.43333333
-        |   
-        |__ Word  ->  президент :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
+coverage: 1, weight: 0.33809523
+All  ->  Countries[*Белоруссии] :: 0.66666666
+    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
+        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
+            Noun  ->  Белоруссии :: 1
 
 coverage: 1, weight: 0.33484848
 All  ->  Countries[*Белоруссия] :: 0.66666666
@@ -2454,32 +2289,18 @@ All  ->  Countries[*Россия] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Россия]<kwt=страны> :: 0.66666666
             Noun  ->  Россия :: 1
 
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33809523
-All  ->  Countries[*Белоруссии] :: 0.66666666
-    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
-        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
-            Noun  ->  Белоруссии :: 1
-
 
 
 ==================== multiwords ====================
 
 Белоруссии: TAuxDicArticle, 
-	страны, 
+	People, страны, 
 Белоруссия: TAuxDicArticle, 
 	People, страны, 
 Россия: TAuxDicArticle, 
 	People, страны, 
 будут: TAuxDicArticle, 
 	предикаты, 
-президент: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -2574,16 +2395,11 @@ All  ->  Countries[*Белоруссии] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.35
-All  ->  PositionInterp[*Президент Белоруссии при] :: 0.36666666
-    PositionInterp  ->  Position[*Президент Белоруссии при] :: 0.36666666
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[Белоруссии]  Word[при]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
-        |   
-        |__ Word  ->  при :: 1
+coverage: 1, weight: 0.36666666
+All  ->  Countries[*Белоруссии] :: 0.66666666
+    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
+        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
+            Noun  ->  Белоруссии :: 1
 
 coverage: 1, weight: 0.33361823
 All  ->  Countries[*Белоруссии] :: 0.66666666
@@ -2597,35 +2413,12 @@ All  ->  Countries[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
             Noun  ->  России :: 1
 
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президент Белоруссии] :: 0.43333333
-    PositionInterp  ->  Position[*Президент Белоруссии] :: 0.43333333
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[Белоруссии] :: 0.43333333
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
-All  ->  Countries[*Белоруссии] :: 0.66666666
-    Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
-        {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
-            Noun  ->  Белоруссии :: 1
-
 
 
 ==================== multiwords ====================
 
 Белоруссии: TAuxDicArticle, 
 	People, страны, 
-Президент: TAuxDicArticle, 
-	должность, 
 России: TAuxDicArticle, 
 	People, страны, 
 
@@ -2647,12 +2440,6 @@ All  ->  Countries[*Белоруссии] :: 0.66666666
 
 
 ===================== people.cxx =====================
-
-coverage: 1, weight: 0.34333333
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
 
 coverage: 1, weight: 0.34
 All  ->  Countries[*РФ] :: 0.66666666
@@ -2682,8 +2469,6 @@ All  ->  Countries[*Белоруссии] :: 0.66666666
 	People, страны, 
 России: TAuxDicArticle, 
 	People, страны, 
-президент: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -2714,12 +2499,6 @@ All  ->  Countries[*Россию] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -2730,8 +2509,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 
@@ -2780,12 +2557,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -2796,48 +2567,14 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
-
-
-===================== people.cxx =====================
-
-coverage: 3, weight: 0.33484848
-All  ->  PositionInterp[*президенты двух стран] :: 0.36666666
-    PositionInterp  ->  Position[*президенты двух стран] :: 0.36666666
-        Position  ->  Word[*президенты]<kwt=должность>  AnyWord[двух]  Noun[стран] :: 0.36666666
-        |   
-        |__ Word  ->  президенты :: 1
-        |   
-        |__ AnyWord  ->  двух :: 1
-        |   
-        |__ Noun  ->  стран :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33555555
-All  ->  PositionInterp[*президенты] :: 0.66666666
-    PositionInterp  ->  Position[*президенты] :: 0.66666666
-        Position  ->  Word[*президенты]<kwt=должность> :: 0.66666666
-            Word  ->  президенты :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33515151
-All  ->  PositionInterp[*президенты двух] :: 0.43333333
-    PositionInterp  ->  Position[*президенты двух] :: 0.43333333
-        Position  ->  Word[*президенты]<kwt=должность>  Word[двух]<kwt=~имя> :: 0.43333333
-        |   
-        |__ Word  ->  президенты :: 1
-        |   
-        |__ Word  ->  двух :: 1
-
 
 
 ==================== multiwords ====================
 
 Путин: TAuxDicArticle, 
 	имя, 
-президенты: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -2847,12 +2584,6 @@ All  ->  PositionInterp[*президенты двух] :: 0.43333333
 
 
 ===================== people.cxx =====================
-
-coverage: 1, weight: 0.33809523
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
 
 coverage: 1, weight: 0.33690476
 All  ->  Countries[*РФ] :: 0.66666666
@@ -2874,8 +2605,6 @@ All  ->  Countries[*Белоруссию] :: 0.66666666
 	People, страны, 
 РФ: TAuxDicArticle, 
 	People, страны, 
-президент: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -2902,12 +2631,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.34333333
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
-
 coverage: 1, weight: 0.34
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -2920,8 +2643,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 РФ: TAuxDicArticle, 
 	People, страны, 
-президент: TAuxDicArticle, 
-	должность, 
 того: TAuxDicArticle, 
 	страны, 
 
@@ -2932,33 +2653,7 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.35
-All  ->  PositionInterp[*Президент Белоруссии выразил] :: 0.36666666
-    PositionInterp  ->  Position[*Президент Белоруссии выразил] :: 0.36666666
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[Белоруссии]  Word[выразил]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
-        |   
-        |__ Word  ->  выразил :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президент Белоруссии] :: 0.43333333
-    PositionInterp  ->  Position[*Президент Белоруссии] :: 0.43333333
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[Белоруссии] :: 0.43333333
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
+coverage: 1, weight: 0.36666666
 All  ->  Countries[*Белоруссии] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
@@ -2969,9 +2664,7 @@ All  ->  Countries[*Белоруссии] :: 0.66666666
 ==================== multiwords ====================
 
 Белоруссии: TAuxDicArticle, 
-	страны, 
-Президент: TAuxDicArticle, 
-	должность, 
+	People, страны, 
 будут: TAuxDicArticle, 
 	предикаты, 
 
@@ -3234,12 +2927,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -3250,8 +2937,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 
@@ -3266,12 +2951,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -3282,8 +2961,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 была: TAuxDicArticle, 
@@ -3304,36 +2981,7 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.35
-All  ->  PositionInterp[*Президент России]  PersonName[Владимир_Путин] :: 0.36666666
-|   
-|__ PositionInterp  ->  Position[*Президент России] :: 0.43333333
-|       Position  ->  Word[*Президент]<kwt=должность>  Noun[России] :: 0.43333333
-|       |   
-|       |__ Word  ->  Президент :: 1
-|       |   
-|       |__ Noun  ->  России :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Владимир_Путин] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Владимир_Путин]<kwt=имя> :: 0.66666666
-            Word  ->  Владимир_Путин :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президент России] :: 0.43333333
-    PositionInterp  ->  Position[*Президент России] :: 0.43333333
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
+coverage: 1, weight: 0.36666666
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -3347,43 +2995,14 @@ All  ->  Countries[*России] :: 0.66666666
 	города, 
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
-Президент: TAuxDicArticle, 
-	должность, 
-Президент_России_Владимир_Путин: TAuxDicArticle, 
-	People, 
 России: TAuxDicArticle, 
-	страны, 
-
-
-===================== people.cxx =====================
-
-coverage: 2, weight: 0.33359788
-All  ->  PositionInterp[*президента]  PersonName[Дмитрия_Пескова] :: 0.43333333
-|   
-|__ PositionInterp  ->  Position[*президента] :: 0.66666666
-|       Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-|           Word  ->  президента :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Дмитрия_Пескова] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Дмитрия_Пескова]<kwt=имя> :: 0.66666666
-            Word  ->  Дмитрия_Пескова :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33361823
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
+	People, страны, 
 
 
 ==================== multiwords ====================
 
 Дмитрия_Пескова: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
-президента_Дмитрия_Пескова: TAuxDicArticle, 
-	People, 
 
 
 ==================== multiwords ====================
@@ -3560,15 +3179,11 @@ All  ->  Countries[*Россию] :: 0.66666666
 	имя, 
 Константину_Черемисову: TAuxDicArticle, 
 	имя, 
-Московская: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
 
 Борису_Надеждину: TAuxDicArticle, 
-	имя, 
-Московской: TAuxDicArticle, 
 	имя, 
 
 
@@ -3602,8 +3217,6 @@ All  ->  Countries[*Россию] :: 0.66666666
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -3662,8 +3275,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 	имя, 
 Черемисов: TAuxDicArticle, 
 	имя, 
-Чистюхин: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -3682,8 +3293,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 Константин_Черемисов: TAuxDicArticle, 
 	имя, 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -3698,8 +3307,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 ==================== multiwords ====================
 
-Московской: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -3756,8 +3363,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 	имя, 
 Надеждин: TAuxDicArticle, 
 	имя, 
-Чистюхин: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -3773,12 +3378,6 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 
 ===================== people.cxx =====================
-
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
 
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
@@ -3794,69 +3393,26 @@ All  ->  Countries[*РФ] :: 0.66666666
 	города, 
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 
 
 ===================== people.cxx =====================
 
-coverage: 4, weight: 0.33690476
-All  ->  PositionInterp[*президентом Белоруссии мнениями по] :: 0.35
-    PositionInterp  ->  Position[*президентом Белоруссии мнениями по] :: 0.35
-        Position  ->  Word[*президентом]<kwt=должность>  AnyWord[Белоруссии]  Noun[мнениями]  Word[по]<kwt=~имя> :: 0.35
-        |   
-        |__ Word  ->  президентом :: 1
-        |   
-        |__ AnyWord  ->  Белоруссии :: 1
-        |   
-        |__ Noun  ->  мнениями :: 1
-        |   
-        |__ Word  ->  по :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34333333
-All  ->  PositionInterp[*президентом] :: 0.66666666
-    PositionInterp  ->  Position[*президентом] :: 0.66666666
-        Position  ->  Word[*президентом]<kwt=должность> :: 0.66666666
-            Word  ->  президентом :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.34
-All  ->  PositionInterp[*президентом Белоруссии] :: 0.43333333
-    PositionInterp  ->  Position[*президентом Белоруссии] :: 0.43333333
-        Position  ->  Word[*президентом]<kwt=должность>  Noun[Белоруссии] :: 0.43333333
-        |   
-        |__ Word  ->  президентом :: 1
-        |   
-        |__ Noun  ->  Белоруссии :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
+coverage: 1, weight: 0.34
 All  ->  Countries[*Белоруссии] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Белоруссии] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Белоруссии]<kwt=страны> :: 0.66666666
             Noun  ->  Белоруссии :: 1
-
-DROPPED OCCURRENCE, coverage: 3, weight: 0.33809523
-All  ->  PositionInterp[*президентом Белоруссии мнениями] :: 0.36666666
-    PositionInterp  ->  Position[*президентом Белоруссии мнениями] :: 0.36666666
-        Position  ->  Word[*президентом]<kwt=должность>  AnyWord[Белоруссии]  Noun[мнениями] :: 0.36666666
-        |   
-        |__ Word  ->  президентом :: 1
-        |   
-        |__ AnyWord  ->  Белоруссии :: 1
-        |   
-        |__ Noun  ->  мнениями :: 1
 
 
 
 ==================== multiwords ====================
 
 Белоруссии: TAuxDicArticle, 
-	страны, 
+	People, страны, 
 были: TAuxDicArticle, 
 	предикаты, 
-президентом: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -3913,12 +3469,6 @@ All  ->  Countries[*Белоруссии] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -3929,8 +3479,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ==================== multiwords ====================
 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 была: TAuxDicArticle, 
@@ -3975,12 +3523,6 @@ All  ->  S1[*в Сочи второго] :: 0.36666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.33555555
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
 coverage: 1, weight: 0.33515151
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -3995,8 +3537,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 	имя, 
 РФ: TAuxDicArticle, 
 	People, страны, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ===================== people.cxx =====================
@@ -4163,12 +3703,6 @@ All  ->  Countries[*Сирии] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.36666666
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
 coverage: 1, weight: 0.35
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -4241,8 +3775,6 @@ All  ->  S1[*Сочи .] :: 0.43333333
 	People, страны, 
 в_Сочи_.": TAuxDicArticle, 
 	People, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -4727,12 +4259,6 @@ All  ->  Countries[*Франции] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.36666666
 All  ->  Countries[*РФ] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*РФ] :: 0.66666666
@@ -4747,43 +4273,16 @@ All  ->  Countries[*РФ] :: 0.66666666
 	города, 
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
-Президент: TAuxDicArticle, 
-	должность, 
 РФ: TAuxDicArticle, 
 	People, страны, 
 Рамзаном_Кадыровым: TAuxDicArticle, 
 	имя, 
 
 
-===================== people.cxx =====================
-
-coverage: 2, weight: 0.33809523
-All  ->  PositionInterp[*президента]  PersonName[Дмитрий_Песков] :: 0.43333333
-|   
-|__ PositionInterp  ->  Position[*президента] :: 0.66666666
-|       Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-|           Word  ->  президента :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Дмитрий_Песков] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Дмитрий_Песков]<kwt=имя> :: 0.66666666
-            Word  ->  Дмитрий_Песков :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
 
 Дмитрий_Песков: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
-президента_Дмитрий_Песков: TAuxDicArticle, 
-	People, 
 
 
 ==================== multiwords ====================
@@ -4878,12 +4377,6 @@ All  ->  Countries[*РФ] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
 coverage: 1, weight: 0.33398692
 All  ->  Countries[*Ираном] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Ираном] :: 0.66666666
@@ -4934,8 +4427,6 @@ All  ->  Countries[*Францией] :: 0.66666666
 	People, страны, 
 Китаем: TAuxDicArticle, 
 	People, страны, 
-Президент: TAuxDicArticle, 
-	должность, 
 Россией: TAuxDicArticle, 
 	People, страны, 
 Францией: TAuxDicArticle, 
@@ -4948,28 +4439,10 @@ All  ->  Countries[*Францией] :: 0.66666666
 	имя, 
 
 
-===================== people.cxx =====================
-
-coverage: 3, weight: 0.34333333
-All  ->  S1[*глава Белого дома] :: 0.36666666
-    S1  ->  S[*глава Белого дома] :: 0.36666666
-        S  ->  Word[*глава]  {Word%TERM,hreg1,kw=города}[Белого]  Word[дома] :: 0.36666666
-        |   
-        |__ Word  ->  глава :: 1
-        |   
-        |__ {Word%TERM,hreg1,kw=города}  ->  Word[*Белого]<kwt=города> :: 0.66666666
-        |       Word  ->  Белого :: 1
-        |   
-        |__ Word  ->  дома :: 1
-
-
-
 ==================== multiwords ====================
 
 Белого: TAuxDicArticle, 
-	города, имя, 
-глава_Белого_дома: TAuxDicArticle, 
-	People, 
+	имя, 
 
 
 ===================== people.cxx =====================
@@ -5012,36 +4485,7 @@ All  ->  Countries[*Франции] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.35
-All  ->  PositionInterp[*Президент Ирана]  PersonName[Хасан_Роухани] :: 0.36666666
-|   
-|__ PositionInterp  ->  Position[*Президент Ирана] :: 0.43333333
-|       Position  ->  Word[*Президент]<kwt=должность>  Noun[Ирана] :: 0.43333333
-|       |   
-|       |__ Word  ->  Президент :: 1
-|       |   
-|       |__ Noun  ->  Ирана :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Хасан_Роухани] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Хасан_Роухани]<kwt=имя> :: 0.66666666
-            Word  ->  Хасан_Роухани :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президент Ирана] :: 0.43333333
-    PositionInterp  ->  Position[*Президент Ирана] :: 0.43333333
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[Ирана] :: 0.43333333
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  Ирана :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
+coverage: 1, weight: 0.36666666
 All  ->  Countries[*Ирана] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Ирана] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Ирана]<kwt=страны> :: 0.66666666
@@ -5052,11 +4496,7 @@ All  ->  Countries[*Ирана] :: 0.66666666
 ==================== multiwords ====================
 
 Ирана: TAuxDicArticle, 
-	страны, 
-Президент: TAuxDicArticle, 
-	должность, 
-Президент_Ирана_Хасан_Роухани: TAuxDicArticle, 
-	People, 
+	People, страны, 
 Хасан_Роухани: TAuxDicArticle, 
 	имя, 
 
@@ -5357,11 +4797,28 @@ All  ->  Countries[*Великобританию] :: 0.66666666
 
 ===================== people.cxx =====================
 
+coverage: 3, weight: 0.33406862
+All  ->  PositionInterp[*директора \ Аэрофлота] :: 0.36666666
+    PositionInterp  ->  Position[*директора \ Аэрофлота] :: 0.36666666
+        Position  ->  Word[*директора]<kwt=должность>  AnyWord[\]  Noun[Аэрофлота] :: 0.36666666
+        |   
+        |__ Word  ->  директора :: 1
+        |   
+        |__ AnyWord  ->  \ :: 1
+        |   
+        |__ Noun  ->  Аэрофлота :: 1
+
 coverage: 1, weight: 0.33354838
 All  ->  Countries[*Великобритании] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Великобритании] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Великобритании]<kwt=страны> :: 0.66666666
             Noun  ->  Великобритании :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.33428571
+All  ->  PositionInterp[*директора] :: 0.66666666
+    PositionInterp  ->  Position[*директора] :: 0.66666666
+        Position  ->  Word[*директора]<kwt=должность> :: 0.66666666
+            Word  ->  директора :: 1
 
 
 
@@ -5375,6 +4832,8 @@ All  ->  Countries[*Великобритании] :: 0.66666666
 	имя, 
 бывшего: TAuxDicArticle, 
 	предикаты, 
+директора: TAuxDicArticle, 
+	должность, 
 
 
 ===================== people.cxx =====================
@@ -5608,36 +5067,7 @@ All  ->  Countries[*России] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.33690476
-All  ->  PositionInterp[*президент России]  PersonName[Владимир_Путин] :: 0.36666666
-|   
-|__ PositionInterp  ->  Position[*президент России] :: 0.43333333
-|       Position  ->  Word[*президент]<kwt=должность>  Noun[России] :: 0.43333333
-|       |   
-|       |__ Word  ->  президент :: 1
-|       |   
-|       |__ Noun  ->  России :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Владимир_Путин] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Владимир_Путин]<kwt=имя> :: 0.66666666
-            Word  ->  Владимир_Путин :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.34
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33809523
-All  ->  PositionInterp[*президент России] :: 0.43333333
-    PositionInterp  ->  Position[*президент России] :: 0.43333333
-        Position  ->  Word[*президент]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  президент :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33809523
+coverage: 1, weight: 0.33809523
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -5656,11 +5086,7 @@ All  ->  Countries[*России] :: 0.66666666
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
 России: TAuxDicArticle, 
-	страны, 
-президент: TAuxDicArticle, 
-	должность, 
-президент_России_Владимир_Путин: TAuxDicArticle, 
-	People, 
+	People, страны, 
 
 
 ==================== multiwords ====================
@@ -5785,32 +5211,6 @@ All  ->  Countries[*Словении] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Словении]<kwt=страны> :: 0.66666666
             Noun  ->  Словении :: 1
 
-coverage: 3, weight: 0.33398692
-All  ->  PositionInterp[*президента Союза европейских] :: 0.36666666
-    PositionInterp  ->  Position[*президента Союза европейских] :: 0.36666666
-        Position  ->  Word[*президента]<kwt=должность>  Noun[Союза]  Word[европейских]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  Союза :: 1
-        |   
-        |__ Word  ->  европейских :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33416666
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33406862
-All  ->  PositionInterp[*президента Союза] :: 0.43333333
-    PositionInterp  ->  Position[*президента Союза] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Noun[Союза] :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  Союза :: 1
-
 
 
 ==================== multiwords ====================
@@ -5819,8 +5219,6 @@ All  ->  PositionInterp[*президента Союза] :: 0.43333333
 	имя, 
 Словении: TAuxDicArticle, 
 	People, страны, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -5893,29 +5291,7 @@ All  ->  Countries[*Исландии] :: 0.66666666
 	People, страны, 
 
 
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.36666666
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
-
-президента: TAuxDicArticle, 
-	должность, 
-
-
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.33809523
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
 
 
 
@@ -5925,8 +5301,6 @@ All  ->  PositionInterp[*президента] :: 0.66666666
 	имя, 
 был: TAuxDicArticle, 
 	предикаты, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -6173,8 +5547,6 @@ All  ->  S1[*над Уфой придаст] :: 0.36666666
 
 ==================== multiwords ====================
 
-красно-белыми: TAuxDicArticle, 
-	города, 
 
 
 ==================== multiwords ====================
@@ -6332,21 +5704,6 @@ All  ->  S1[*( Смоленск )] :: 0.36666666
         |__ Punctuation  ->  RBracket[*)] :: 0.66666666
                 RBracket  ->  ) :: 1
 
-coverage: 3, weight: 0.33338293
-All  ->  S1[*( Нижний_Новгород )] :: 0.36666666
-    S1  ->  S[*( Нижний_Новгород )] :: 0.36666666
-        S  ->  {Punctuation+}[*(]  {Word%TERM,hreg1,kw=города}[Нижний_Новгород]  Punctuation[)] :: 0.36666666
-        |   
-        |__ {Punctuation+}  ->  Punctuation[*(] :: 0.66666666
-        |       Punctuation  ->  LBracket[*(] :: 0.66666666
-        |           LBracket  ->  ( :: 1
-        |   
-        |__ {Word%TERM,hreg1,kw=города}  ->  Word[*Нижний_Новгород]<kwt=города> :: 0.66666666
-        |       Word  ->  Нижний_Новгород :: 1
-        |   
-        |__ Punctuation  ->  RBracket[*)] :: 0.66666666
-                RBracket  ->  ) :: 1
-
 DROPPED OCCURRENCE, coverage: 2, weight: 0.33356321
 All  ->  S1[*Оренбург -] :: 0.43333333
     S1  ->  S[*Оренбург -] :: 0.43333333
@@ -6410,24 +5767,11 @@ All  ->  S1[*Смоленск )] :: 0.43333333
         |__ Punctuation  ->  RBracket[*)] :: 0.66666666
                 RBracket  ->  ) :: 1
 
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33338293
-All  ->  S1[*Нижний_Новгород )] :: 0.43333333
-    S1  ->  S[*Нижний_Новгород )] :: 0.43333333
-        S  ->  {Word%TERM,hreg1,kw=города}[*Нижний_Новгород]  Punctuation[)] :: 0.43333333
-        |   
-        |__ {Word%TERM,hreg1,kw=города}  ->  Word[*Нижний_Новгород]<kwt=города> :: 0.66666666
-        |       Word  ->  Нижний_Новгород :: 1
-        |   
-        |__ Punctuation  ->  RBracket[*)] :: 0.66666666
-                RBracket  ->  ) :: 1
-
 
 
 ==================== multiwords ====================
 
 "Краснодар"_-: TAuxDicArticle, 
-	People, 
-(_Нижний_Новгород_): TAuxDicArticle, 
 	People, 
 (_Смоленск_): TAuxDicArticle, 
 	People, 
@@ -6447,8 +5791,6 @@ All  ->  S1[*Нижний_Новгород )] :: 0.43333333
 	города, 
 Михаил_Вилков: TAuxDicArticle, 
 	имя, 
-Нижний_Новгород: TAuxDicArticle, 
-	города, 
 Николай_Волошин: TAuxDicArticle, 
 	имя, 
 Оренбург: TAuxDicArticle, 
@@ -6535,8 +5877,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Гассиева: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -6573,8 +5913,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Эдегора: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -6649,22 +5987,10 @@ All  ->  Countries[*Норвегии] :: 0.66666666
 	предикаты, 
 
 
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.35
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
-
-
-
 ==================== multiwords ====================
 
 Крейг_Риди: TAuxDicArticle, 
 	имя, 
-президент: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -7029,7 +6355,46 @@ All  ->  Countries[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
             Noun  ->  России :: 1
 
-coverage: 1, weight: 0.33376623
+coverage: 4, weight: 0.33372859
+All  ->  PositionInterp[*директор по России компании] :: 0.35
+    PositionInterp  ->  Position[*директор по России компании] :: 0.35
+        Position  ->  Word[*директор]<kwt=должность>  AnyWord[по]  Noun[России]  Word[компании]<kwt=~имя> :: 0.35
+        |   
+        |__ Word  ->  директор :: 1
+        |   
+        |__ AnyWord  ->  по :: 1
+        |   
+        |__ Noun  ->  России :: 1
+        |   
+        |__ Word  ->  компании :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.33385964
+All  ->  PositionInterp[*директор] :: 0.66666666
+    PositionInterp  ->  Position[*директор] :: 0.66666666
+        Position  ->  Word[*директор]<kwt=должность> :: 0.66666666
+            Word  ->  директор :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33380952
+All  ->  PositionInterp[*директор по] :: 0.43333333
+    PositionInterp  ->  Position[*директор по] :: 0.43333333
+        Position  ->  Word[*директор]<kwt=должность>  Word[по]<kwt=~имя> :: 0.43333333
+        |   
+        |__ Word  ->  директор :: 1
+        |   
+        |__ Word  ->  по :: 1
+
+DROPPED OCCURRENCE, coverage: 3, weight: 0.33376623
+All  ->  PositionInterp[*директор по России] :: 0.36666666
+    PositionInterp  ->  Position[*директор по России] :: 0.36666666
+        Position  ->  Word[*директор]<kwt=должность>  AnyWord[по]  Noun[России] :: 0.36666666
+        |   
+        |__ Word  ->  директор :: 1
+        |   
+        |__ AnyWord  ->  по :: 1
+        |   
+        |__ Noun  ->  России :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.33376623
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -7047,6 +6412,8 @@ All  ->  Countries[*России] :: 0.66666666
 	People, страны, 
 Сергей_Кузнецов: TAuxDicArticle, 
 	имя, 
+директор: TAuxDicArticle, 
+	должность, 
 принимал: TAuxDicArticle, 
 	предикаты, 
 
@@ -7071,63 +6438,15 @@ All  ->  Countries[*России] :: 0.66666666
 
 
 
-===================== people.cxx =====================
-
-coverage: 3, weight: 0.33461538
-All  ->  PositionInterp[*президента Союза европейских] :: 0.36666666
-    PositionInterp  ->  Position[*президента Союза европейских] :: 0.36666666
-        Position  ->  Word[*президента]<kwt=должность>  Noun[Союза]  Word[европейских]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  Союза :: 1
-        |   
-        |__ Word  ->  европейских :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33515151
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33484848
-All  ->  PositionInterp[*президента Союза] :: 0.43333333
-    PositionInterp  ->  Position[*президента Союза] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Noun[Союза] :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  Союза :: 1
-
-
-
 ==================== multiwords ====================
 
 Бывший: TAuxDicArticle, 
 	предикаты, 
 Дэвид_Бекхэм: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
-
-
-
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.36666666
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-coverage: 1, weight: 0.33391812
-All  ->  PositionInterp[*президент] :: 0.66666666
-    PositionInterp  ->  Position[*президент] :: 0.66666666
-        Position  ->  Word[*президент]<kwt=должность> :: 0.66666666
-            Word  ->  президент :: 1
 
 
 
@@ -7135,10 +6454,6 @@ All  ->  PositionInterp[*президент] :: 0.66666666
 
 Александер_Чеферин: TAuxDicArticle, 
 	имя, 
-президент: TAuxDicArticle, 
-	должность, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -7157,22 +6472,10 @@ All  ->  PositionInterp[*президент] :: 0.66666666
 	имя, 
 
 
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.35
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-
-
 ==================== multiwords ====================
 
 Бекхэм: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -7184,16 +6487,6 @@ All  ->  PositionInterp[*президента] :: 0.66666666
 
 
 ==================== multiwords ====================
-
-
-
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.36666666
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
 
 
 
@@ -7201,18 +6494,6 @@ All  ->  PositionInterp[*президента] :: 0.66666666
 
 Жак_Делор: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
-
-
-===================== people.cxx =====================
-
-coverage: 1, weight: 0.33690476
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
 
 
 ==================== multiwords ====================
@@ -7221,8 +6502,6 @@ All  ->  PositionInterp[*президента] :: 0.66666666
 	имя, 
 Чеферин: TAuxDicArticle, 
 	имя, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -7625,7 +6904,7 @@ All  ->  Countries[*Чехии] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Чехии]<kwt=страны> :: 0.66666666
             Noun  ->  Чехии :: 1
 
-coverage: 1, weight: 0.33391812
+coverage: 3, weight: 0.33391812
 All  ->  Countries[*Боснии_и_Герцеговины] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Боснии_и_Герцеговины] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Боснии_и_Герцеговины]<kwt=страны> :: 0.66666666
@@ -7920,8 +7199,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Котюков: TAuxDicArticle, 
-	имя, 
 России: TAuxDicArticle, 
 	People, страны, 
 того: TAuxDicArticle, 
@@ -7948,8 +7225,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Котюков: TAuxDicArticle, 
-	имя, 
 будет: TAuxDicArticle, 
 	предикаты, 
 будучи: TAuxDicArticle, 
@@ -8121,8 +7396,6 @@ All  ->  S1[*Кирове .] :: 0.43333333
 
 Кирове: TAuxDicArticle, 
 	города, имя, 
-Рысевой: TAuxDicArticle, 
-	имя, 
 в_Кирове_.: TAuxDicArticle, 
 	People, 
 городе: TAuxDicArticle, 
@@ -8174,8 +7447,6 @@ All  ->  Countries[*России] :: 0.66666666
 ==================== multiwords ====================
 
 Андрей_Воробьев: TAuxDicArticle, 
-	имя, 
-Московской: TAuxDicArticle, 
 	имя, 
 
 
@@ -8339,8 +7610,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Саратцева: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -8507,22 +7776,7 @@ All  ->  S1[*в Сочи был] :: 0.36666666
         |   
         |__ Word  ->  был :: 1
 
-coverage: 2, weight: 0.33385964
-All  ->  PositionInterp[*президента России] :: 0.43333333
-    PositionInterp  ->  Position[*президента России] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33391812
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33385964
+coverage: 1, weight: 0.33385964
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -8533,15 +7787,13 @@ All  ->  Countries[*России] :: 0.66666666
 ==================== multiwords ====================
 
 России: TAuxDicArticle, 
-	страны, 
+	People, страны, 
 Сочи: TAuxDicArticle, 
 	города, 
 был: TAuxDicArticle, 
 	предикаты, 
 в_Сочи_был: TAuxDicArticle, 
 	People, 
-президента: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -8656,42 +7908,13 @@ All  ->  Countries[*России] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.35
-All  ->  PositionInterp[*Президент России]  PersonName[Владимир_Путин] :: 0.36666666
-|   
-|__ PositionInterp  ->  Position[*Президент России] :: 0.43333333
-|       Position  ->  Word[*Президент]<kwt=должность>  Noun[России] :: 0.43333333
-|       |   
-|       |__ Word  ->  Президент :: 1
-|       |   
-|       |__ Noun  ->  России :: 1
-|   
-|__ PersonName  ->  {Word%TERM,kw=имя}[*Владимир_Путин] :: 0.66666666
-        {Word%TERM,kw=имя}  ->  Word[*Владимир_Путин]<kwt=имя> :: 0.66666666
-            Word  ->  Владимир_Путин :: 1
-
-coverage: 1, weight: 0.33376623
+coverage: 1, weight: 0.36666666
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
             Noun  ->  России :: 1
 
-DROPPED OCCURRENCE, coverage: 1, weight: 0.43333333
-All  ->  PositionInterp[*Президент] :: 0.66666666
-    PositionInterp  ->  Position[*Президент] :: 0.66666666
-        Position  ->  Word[*Президент]<kwt=должность> :: 0.66666666
-            Word  ->  Президент :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.36666666
-All  ->  PositionInterp[*Президент России] :: 0.43333333
-    PositionInterp  ->  Position[*Президент России] :: 0.43333333
-        Position  ->  Word[*Президент]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  Президент :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.36666666
+coverage: 1, weight: 0.33376623
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -8705,10 +7928,6 @@ All  ->  Countries[*России] :: 0.66666666
 	города, 
 Владимир_Путин: TAuxDicArticle, 
 	имя, 
-Президент: TAuxDicArticle, 
-	должность, 
-Президент_России_Владимир_Путин: TAuxDicArticle, 
-	People, 
 России: TAuxDicArticle, 
 	People, страны, 
 
@@ -8721,53 +7940,8 @@ All  ->  Countries[*России] :: 0.66666666
 	предикаты, 
 
 
-===================== people.cxx =====================
-
-coverage: 4, weight: 0.33428571
-All  ->  PositionInterp[*президенту о проектах по] :: 0.35
-    PositionInterp  ->  Position[*президенту о проектах по] :: 0.35
-        Position  ->  Word[*президенту]<kwt=должность>  AnyWord[о]  Noun[проектах]  Word[по]<kwt=~имя> :: 0.35
-        |   
-        |__ Word  ->  президенту :: 1
-        |   
-        |__ AnyWord  ->  о :: 1
-        |   
-        |__ Noun  ->  проектах :: 1
-        |   
-        |__ Word  ->  по :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33484848
-All  ->  PositionInterp[*президенту] :: 0.66666666
-    PositionInterp  ->  Position[*президенту] :: 0.66666666
-        Position  ->  Word[*президенту]<kwt=должность> :: 0.66666666
-            Word  ->  президенту :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33461538
-All  ->  PositionInterp[*президенту о] :: 0.43333333
-    PositionInterp  ->  Position[*президенту о] :: 0.43333333
-        Position  ->  Word[*президенту]<kwt=должность>  Word[о]<kwt=~имя> :: 0.43333333
-        |   
-        |__ Word  ->  президенту :: 1
-        |   
-        |__ Word  ->  о :: 1
-
-DROPPED OCCURRENCE, coverage: 3, weight: 0.33443223
-All  ->  PositionInterp[*президенту о проектах] :: 0.36666666
-    PositionInterp  ->  Position[*президенту о проектах] :: 0.36666666
-        Position  ->  Word[*президенту]<kwt=должность>  AnyWord[о]  Noun[проектах] :: 0.36666666
-        |   
-        |__ Word  ->  президенту :: 1
-        |   
-        |__ AnyWord  ->  о :: 1
-        |   
-        |__ Noun  ->  проектах :: 1
-
-
-
 ==================== multiwords ====================
 
-президенту: TAuxDicArticle, 
-	должность, 
 
 
 ==================== multiwords ====================
@@ -8798,8 +7972,6 @@ All  ->  PositionInterp[*президенту о проектах] :: 0.36666666
 
 ==================== multiwords ====================
 
-Московский: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -8822,8 +7994,6 @@ All  ->  PositionInterp[*президенту о проектах] :: 0.36666666
 
 ==================== multiwords ====================
 
-Московский: TAuxDicArticle, 
-	имя, 
 
 
 ==================== multiwords ====================
@@ -8832,8 +8002,6 @@ All  ->  PositionInterp[*президенту о проектах] :: 0.36666666
 
 ==================== multiwords ====================
 
-Великого: TAuxDicArticle, 
-	имя, 
 Казанский: TAuxDicArticle, 
 	имя, 
 Петра_Великого: TAuxDicArticle, 
@@ -8906,8 +8074,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Московский: TAuxDicArticle, 
-	имя, 
 является: TAuxDicArticle, 
 	предикаты, 
 
@@ -9236,8 +8402,6 @@ All  ->  Countries[*России] :: 0.66666666
 
 ==================== multiwords ====================
 
-Самолетовой: TAuxDicArticle, 
-	имя, 
 было: TAuxDicArticle, 
 	предикаты, 
 
@@ -9285,7 +8449,49 @@ All  ->  S1[*ЮЖНО-САХАЛИНСК ,] :: 0.43333333
 
 ===================== people.cxx =====================
 
-coverage: 1, weight: 0.33555555
+coverage: 5, weight: 0.33515151
+All  ->  PositionInterp[*директор Ворлдскиллс Россия]  PersonName[Роберт_Уразов] :: 0.35
+|   
+|__ PositionInterp  ->  Position[*директор Ворлдскиллс Россия] :: 0.36666666
+|       Position  ->  Word[*директор]<kwt=должность>  AnyWord[Ворлдскиллс]  Noun[Россия] :: 0.36666666
+|       |   
+|       |__ Word  ->  директор :: 1
+|       |   
+|       |__ AnyWord  ->  Ворлдскиллс :: 1
+|       |   
+|       |__ Noun  ->  Россия :: 1
+|   
+|__ PersonName  ->  {Word%TERM,kw=имя}[*Роберт_Уразов] :: 0.66666666
+        {Word%TERM,kw=имя}  ->  Word[*Роберт_Уразов]<kwt=имя> :: 0.66666666
+            Word  ->  Роберт_Уразов :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.33690476
+All  ->  PositionInterp[*директор] :: 0.66666666
+    PositionInterp  ->  Position[*директор] :: 0.66666666
+        Position  ->  Word[*директор]<kwt=должность> :: 0.66666666
+            Word  ->  директор :: 1
+
+DROPPED OCCURRENCE, coverage: 2, weight: 0.33611111
+All  ->  PositionInterp[*директор Ворлдскиллс] :: 0.43333333
+    PositionInterp  ->  Position[*директор Ворлдскиллс] :: 0.43333333
+        Position  ->  Word[*директор]<kwt=должность>  Word[Ворлдскиллс]<kwt=~имя> :: 0.43333333
+        |   
+        |__ Word  ->  директор :: 1
+        |   
+        |__ Word  ->  Ворлдскиллс :: 1
+
+DROPPED OCCURRENCE, coverage: 3, weight: 0.33555555
+All  ->  PositionInterp[*директор Ворлдскиллс Россия] :: 0.36666666
+    PositionInterp  ->  Position[*директор Ворлдскиллс Россия] :: 0.36666666
+        Position  ->  Word[*директор]<kwt=должность>  AnyWord[Ворлдскиллс]  Noun[Россия] :: 0.36666666
+        |   
+        |__ Word  ->  директор :: 1
+        |   
+        |__ AnyWord  ->  Ворлдскиллс :: 1
+        |   
+        |__ Noun  ->  Россия :: 1
+
+DROPPED OCCURRENCE, coverage: 1, weight: 0.33555555
 All  ->  Countries[*Россия] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*Россия] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*Россия]<kwt=страны> :: 0.66666666
@@ -9300,7 +8506,11 @@ All  ->  Countries[*Россия] :: 0.66666666
 Роберт_Уразов: TAuxDicArticle, 
 	имя, 
 Россия: TAuxDicArticle, 
-	People, страны, 
+	страны, 
+директор: TAuxDicArticle, 
+	должность, 
+директор_"Ворлдскиллс_Россия"_Роберт_Уразов: TAuxDicArticle, 
+	People, 
 
 
 ===================== people.cxx =====================
@@ -9345,33 +8555,7 @@ All  ->  Countries[*Россия] :: 0.66666666
 
 ===================== people.cxx =====================
 
-coverage: 3, weight: 0.33416666
-All  ->  PositionInterp[*президента России о] :: 0.36666666
-    PositionInterp  ->  Position[*президента России о] :: 0.36666666
-        Position  ->  Word[*президента]<kwt=должность>  Noun[России]  Word[о]<kwt=~имя> :: 0.36666666
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  России :: 1
-        |   
-        |__ Word  ->  о :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33443223
-All  ->  PositionInterp[*президента] :: 0.66666666
-    PositionInterp  ->  Position[*президента] :: 0.66666666
-        Position  ->  Word[*президента]<kwt=должность> :: 0.66666666
-            Word  ->  президента :: 1
-
-DROPPED OCCURRENCE, coverage: 2, weight: 0.33428571
-All  ->  PositionInterp[*президента России] :: 0.43333333
-    PositionInterp  ->  Position[*президента России] :: 0.43333333
-        Position  ->  Word[*президента]<kwt=должность>  Noun[России] :: 0.43333333
-        |   
-        |__ Word  ->  президента :: 1
-        |   
-        |__ Noun  ->  России :: 1
-
-DROPPED OCCURRENCE, coverage: 1, weight: 0.33428571
+coverage: 1, weight: 0.33428571
 All  ->  Countries[*России] :: 0.66666666
     Countries  ->  {Noun%TERM,hreg1,kw=страны}[*России] :: 0.66666666
         {Noun%TERM,hreg1,kw=страны}  ->  Noun[*России]<kwt=страны> :: 0.66666666
@@ -9384,9 +8568,7 @@ All  ->  Countries[*России] :: 0.66666666
 Андрей_Никитин: TAuxDicArticle, 
 	имя, 
 России: TAuxDicArticle, 
-	страны, 
-президента: TAuxDicArticle, 
-	должность, 
+	People, страны, 
 
 
 ==================== multiwords ====================
@@ -9484,8 +8666,6 @@ All  ->  Countries[*России] :: 0.66666666
 ==================== multiwords ====================
 
 Виктора_Садовничего: TAuxDicArticle, 
-	имя, 
-Московский: TAuxDicArticle, 
 	имя, 
 будут: TAuxDicArticle, 
 	предикаты, 
@@ -10344,8 +9524,6 @@ All  ->  Countries[*России] :: 0.66666666
 	города, 
 М._В._Ломоносова: TAuxDicArticle, 
 	имя, 
-Московского: TAuxDicArticle, 
-	имя, 
 России: TAuxDicArticle, 
 	People, страны, 
 
@@ -10496,8 +9674,6 @@ All  ->  Countries[*Германии] :: 0.66666666
 	имя, 
 Павлова: TAuxDicArticle, 
 	города, 
-Штыля: TAuxDicArticle, 
-	имя, 
 того: TAuxDicArticle, 
 	страны, 
 
@@ -10523,8 +9699,6 @@ All  ->  Countries[*Германии] :: 0.66666666
 Илья_Первухин: TAuxDicArticle, 
 	имя, 
 Кирилл_Шамшурин: TAuxDicArticle, 
-	имя, 
-Мелантьев: TAuxDicArticle, 
 	имя, 
 Михаил_Павлов: TAuxDicArticle, 
 	имя, 
@@ -10615,8 +9789,6 @@ All  ->  Countries[*Португалии] :: 0.66666666
 Наталья_Подольская: TAuxDicArticle, 
 	имя, 
 Светланы_Черниговской: TAuxDicArticle, 
-	имя, 
-Собетовой: TAuxDicArticle, 
 	имя, 
 
 
