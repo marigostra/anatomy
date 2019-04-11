@@ -1,0 +1,19 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "dict.gzt";
+  PrettyOutput = "PrettyOutput.html";
+  Input = {
+    File = "input.txt";
+  }
+
+  Articles = [
+    { Name = "testarticle" }
+  ]
+
+  Output = {
+    File = "facts.txt";
+    Format = text;
+  }
+  PrintTree="tree.txt";
+}
