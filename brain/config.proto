@@ -2,7 +2,7 @@ encoding "utf8";
 
 TTextMinerConfig {
   Dictionary = "dict.gzt";
-  PrettyOutput = "PrettyOutput.html";
+  PrettyOutput = "output.html";
   Input = {
     File = "input.txt";
   }
@@ -11,8 +11,15 @@ TTextMinerConfig {
     { Name = "testarticle" }
   ]
 
+  Facts = [
+    { Name = "Organ" }
+  ]
+
+
+
+
   Output = {
-    File = "facts.txt";
+    File = "output.txt";
     Format = text;
   }
   PrintTree="tree.txt";
