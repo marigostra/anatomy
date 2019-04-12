@@ -7,8 +7,6 @@ TTextMinerConfig {
     File = "input.txt";
   }
 
-PrintRules = "true";
-
   Articles = [
     { Name = "testarticle" }
   ]
@@ -20,6 +18,6 @@ PrintRules = "true";
 
   Output = {
     File = "output.txt";
-    Format = xml;
+    Format = text;
   }
 }
