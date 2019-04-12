@@ -3,5 +3,13 @@ import "facttypes_base.proto";
 
 message Organ: NFactType.TFact
 {
-	optional string Name = 2;
+	optional string Name = 1;
 }
+
+message Rel: NFactType.TFact
+{
+	optional string Name1 = 1;
+		optional string Name2 = 2;
+		optional string Type = 3;
+}
+
