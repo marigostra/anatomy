@@ -12,8 +12,8 @@ TTextMinerConfig {
   ]
 
   Facts = [
-    { Name = "Organ" },
-        { Name = "Rel" }
+    { Name = "Equality" },
+        { Name = "Including" }
   ]
 
 
