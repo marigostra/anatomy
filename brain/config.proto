@@ -7,6 +7,8 @@ TTextMinerConfig {
     File = "input.txt";
   }
 
+PrintRules = "true";
+
   Articles = [
     { Name = "testarticle" }
   ]
@@ -16,12 +18,8 @@ TTextMinerConfig {
         { Name = "Including" }
   ]
 
-
-
-
   Output = {
     File = "output.txt";
-    Format = text;
+    Format = xml;
   }
-  PrintTree="tree.txt";
 }
